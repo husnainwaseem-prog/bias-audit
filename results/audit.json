@@ -1,0 +1,232 @@
+{
+  "models": {
+    "baseline": {
+      "accuracy": 0.8463,
+      "by_sex": [
+        {
+          "group": "Female",
+          "n": 4913,
+          "base_rate": 0.1134,
+          "accuracy": 0.9259,
+          "selection_rate": 0.0877,
+          "tpr": 0.5601,
+          "fpr": 0.0273
+        },
+        {
+          "group": "Male",
+          "n": 10147,
+          "base_rate": 0.3097,
+          "accuracy": 0.8077,
+          "selection_rate": 0.2704,
+          "tpr": 0.6262,
+          "fpr": 0.1108
+        }
+      ],
+      "by_race": [
+        {
+          "group": "Black",
+          "n": 1411,
+          "base_rate": 0.1191,
+          "accuracy": 0.9227,
+          "selection_rate": 0.09,
+          "tpr": 0.5536,
+          "fpr": 0.0274
+        },
+        {
+          "group": "Other",
+          "n": 679,
+          "base_rate": 0.2415,
+          "accuracy": 0.8542,
+          "selection_rate": 0.1811,
+          "tpr": 0.5732,
+          "fpr": 0.0563
+        },
+        {
+          "group": "White",
+          "n": 12970,
+          "base_rate": 0.2597,
+          "accuracy": 0.8375,
+          "selection_rate": 0.2255,
+          "tpr": 0.6214,
+          "fpr": 0.0866
+        }
+      ],
+      "gaps_sex": {
+        "demographic_parity_diff": 0.1827,
+        "equal_opportunity_diff": 0.0661,
+        "equalized_odds_diff": 0.0835
+      },
+      "gaps_race": {
+        "demographic_parity_diff": 0.1355,
+        "equal_opportunity_diff": 0.0678,
+        "equalized_odds_diff": 0.0678
+      }
+    },
+    "no_sensitive_attrs": {
+      "accuracy": 0.8438,
+      "by_sex": [
+        {
+          "group": "Female",
+          "n": 4913,
+          "base_rate": 0.1134,
+          "accuracy": 0.9218,
+          "selection_rate": 0.0938,
+          "tpr": 0.5691,
+          "fpr": 0.0331
+        },
+        {
+          "group": "Male",
+          "n": 10147,
+          "base_rate": 0.3097,
+          "accuracy": 0.8061,
+          "selection_rate": 0.2695,
+          "tpr": 0.622,
+          "fpr": 0.1114
+        }
+      ],
+      "by_race": [
+        {
+          "group": "Black",
+          "n": 1411,
+          "base_rate": 0.1191,
+          "accuracy": 0.9185,
+          "selection_rate": 0.1042,
+          "tpr": 0.5952,
+          "fpr": 0.0378
+        },
+        {
+          "group": "Other",
+          "n": 679,
+          "base_rate": 0.2415,
+          "accuracy": 0.8468,
+          "selection_rate": 0.2032,
+          "tpr": 0.6037,
+          "fpr": 0.0757
+        },
+        {
+          "group": "White",
+          "n": 12970,
+          "base_rate": 0.2597,
+          "accuracy": 0.8355,
+          "selection_rate": 0.2244,
+          "tpr": 0.6155,
+          "fpr": 0.0873
+        }
+      ],
+      "gaps_sex": {
+        "demographic_parity_diff": 0.1757,
+        "equal_opportunity_diff": 0.0529,
+        "equalized_odds_diff": 0.0783
+      },
+      "gaps_race": {
+        "demographic_parity_diff": 0.1202,
+        "equal_opportunity_diff": 0.0203,
+        "equalized_odds_diff": 0.0495
+      }
+    },
+    "reweighed": {
+      "accuracy": 0.8461,
+      "by_sex": [
+        {
+          "group": "Female",
+          "n": 4913,
+          "base_rate": 0.1134,
+          "accuracy": 0.9216,
+          "selection_rate": 0.1095,
+          "tpr": 0.6373,
+          "fpr": 0.042
+        },
+        {
+          "group": "Male",
+          "n": 10147,
+          "base_rate": 0.3097,
+          "accuracy": 0.8095,
+          "selection_rate": 0.2389,
+          "tpr": 0.5781,
+          "fpr": 0.0867
+        }
+      ],
+      "by_race": [
+        {
+          "group": "Black",
+          "n": 1411,
+          "base_rate": 0.1191,
+          "accuracy": 0.915,
+          "selection_rate": 0.1077,
+          "tpr": 0.5952,
+          "fpr": 0.0418
+        },
+        {
+          "group": "Other",
+          "n": 679,
+          "base_rate": 0.2415,
+          "accuracy": 0.8571,
+          "selection_rate": 0.1782,
+          "tpr": 0.5732,
+          "fpr": 0.0524
+        },
+        {
+          "group": "White",
+          "n": 12970,
+          "base_rate": 0.2597,
+          "accuracy": 0.838,
+          "selection_rate": 0.2073,
+          "tpr": 0.5873,
+          "fpr": 0.074
+        }
+      ],
+      "gaps_sex": {
+        "demographic_parity_diff": 0.1294,
+        "equal_opportunity_diff": 0.0592,
+        "equalized_odds_diff": 0.0592
+      },
+      "gaps_race": {
+        "demographic_parity_diff": 0.0996,
+        "equal_opportunity_diff": 0.022,
+        "equalized_odds_diff": 0.0322
+      }
+    }
+  },
+  "shap_top_features": [
+    {
+      "feature": "marital-status=Married-civ-spouse",
+      "mean_abs_shap": 0.058
+    },
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.0457
+    },
+    {
+      "feature": "relationship=Husband",
+      "mean_abs_shap": 0.0442
+    },
+    {
+      "feature": "capital-gain",
+      "mean_abs_shap": 0.0421
+    },
+    {
+      "feature": "education-num",
+      "mean_abs_shap": 0.0399
+    },
+    {
+      "feature": "hours-per-week",
+      "mean_abs_shap": 0.0313
+    },
+    {
+      "feature": "occupation=Exec-managerial",
+      "mean_abs_shap": 0.019
+    },
+    {
+      "feature": "marital-status=Never-married",
+      "mean_abs_shap": 0.0178
+    },
+    {
+      "feature": "sex=Female",
+      "mean_abs_shap": 0.0123
+    },
+    {
+      "feature": "occupation=Prof-specialty",
+      "mean_abs_shap": 0.0102
+    }
+  ]
+}
